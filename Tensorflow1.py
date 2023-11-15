@@ -116,6 +116,5 @@ for fr in range(len(iPY)):
 
     ims.append([im])
 ani = animation.ArtistAnimation(fig, ims, interval=50, blit=True, repeat_delay=1000)
+#Guarda el video
 ani.save('animation.mp4')
-
-
