@@ -117,25 +117,5 @@ for fr in range(len(iPY)):
     ims.append([im])
 ani = animation.ArtistAnimation(fig, ims, interval=50, blit=True, repeat_delay=1000)
 ani.save('animation.mp4')
-# ----- CÓDIGO ANIMACIÓN ----- #
 
-ims = []
-
-fig = plt.figure(figsize=(10, 10))
-
-print("--- Generando animación ---")
-
-for fr in range(len(iPY)):
-    im = plt.pcolormesh(_x0, _x1, iPY[fr], cmap="coolwarm", animated=True)
-
-    # Visualización de la nube de datos.
-    plt.scatter(X[Y == 0, 0], X[Y == 0, 1], c="skyblue")
-    plt.scatter(X[Y == 1, 0], X[Y == 1, 1], c="salmon")
-
-    # plt.title("Resultado Clasificación")
-    plt.tick_params(labelbottom=False, labelleft=False)
-
-    ims.append([im])
-ani = animation.ArtistAnimation(fig, ims, interval=50, blit=True, repeat_delay=1000)
-ani.save('animation.mp4')
 
